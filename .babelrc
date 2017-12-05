@@ -1,3 +1,13 @@
 {
-  "presets": ["lag"]
+  "env": {
+    "test": {
+      "presets": ["lag"]
+    },
+    "cjs": {
+      "presets": [["lag", { "loose": true }]]
+    },
+    "es": {
+      "presets": [["lag", { "loose": true, "modules": false }]]
+    }
+  }
 }
