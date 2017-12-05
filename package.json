@@ -1,0 +1,36 @@
+{
+  "name": "export-npm-package-config",
+  "version": "0.0.1",
+  "description": "Extract npm package config variables from process.env for in-app usage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier-eslint --write --list-different index.js",
+    "eslint": "eslint index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lutangar/export-npm-package-config.git"
+  },
+  "keywords": [
+    "npm",
+    "package",
+    "config",
+    "env",
+    "export"
+  ],
+  "author": "lutangar <johan.dufour@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lutangar/export-npm-package-config/issues"
+  },
+  "homepage": "https://github.com/lutangar/export-npm-package-config#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.34",
+    "babel-eslint": "^8.0.3",
+    "babel-preset-lag": "^0.1.2",
+    "eslint": "^4.12.1",
+    "eslint-config-lag": "0.0.6",
+    "prettier-eslint-cli": "^4.4.0"
+  }
+}
