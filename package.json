@@ -40,6 +40,7 @@
     "eslint": "^4.12.1",
     "eslint-config-lag": "0.0.6",
     "prettier-eslint-cli": "^4.4.0",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "safe-publish-latest": "^1.1.1"
   }
 }
