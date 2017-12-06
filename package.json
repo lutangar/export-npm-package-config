@@ -1,6 +1,6 @@
 {
-  "name": "export-npm-package-config",
-  "version": "0.0.12",
+  "name": "extract-npm-package-config",
+  "version": "0.1.0",
   "description": "Extract npm package config variables from process.env for in-app usage",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -23,21 +23,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lutangar/export-npm-package-config.git"
+    "url": "git+https://github.com/lutangar/extract-npm-package-config.git"
   },
   "keywords": [
     "npm",
     "package",
     "config",
     "env",
-    "export"
+    "extract",
+    "webpack",
+    "define",
+    "environment"
   ],
   "author": "lutangar <johan.dufour@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lutangar/export-npm-package-config/issues"
+    "url": "https://github.com/lutangar/extract-npm-package-config/issues"
   },
-  "homepage": "https://github.com/lutangar/export-npm-package-config#readme",
+  "homepage": "https://github.com/lutangar/extract-npm-package-config#readme",
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.34",
     "@babel/core": "^7.0.0-beta.34",

@@ -10,7 +10,7 @@ test('adds 1 + 2 to equal 3', () => {
   };
 
   expect(extractPackageConfig(processEnv)).toEqual({
-    DOMAIN: 'localhost',
-    PORT: 3000,
+    npm_package_config_domain: 'localhost',
+    npm_package_config_port: 3000,
   });
 });
