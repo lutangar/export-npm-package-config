@@ -5,6 +5,7 @@ This package can extract npm package config variables from `process.env` for in-
 Npm per-package configuration setting is an *underrated* feature.
 > https://docs.npmjs.com/misc/config#per-package-config-settings
 
+**package.json**
 ```
 ...
   "config": {
@@ -27,19 +28,14 @@ Npm per-package configuration setting is an *underrated* feature.
 ```
 const packageConfig = extractPackageConfig(process.env);
 ```
-> npm_package_config_domain: 'localhost'
+> npm_package_config_domain: 'localhost' 
 > npm_package_config_port: 3000
 
 ## Webpack
 
 It can easily be used in conjunction with webpack [EnvironmentPlugin](https://webpack.js.org/plugins/environment-plugin/) client-side.
 
-> **Note 1:** You should'nt make use of it server side, because `weback.DefinePlugin` replace the variables in the source code itself,
->thus this would defeat the purpose of having `env` variables that can be easily overridden.
-
-> **Note 2:** There is currently a limitation due to the way `weback.DefinePlugin` replace process.env occurrences in the code.
-> You can't *destructure* `process.env` see https://github.com/webpack/webpack/issues/5392 
-
+**webpack.config.js**
 ```
 ...
 plugins: [
@@ -47,6 +43,13 @@ plugins: [
 ]
 ...
 ```
+
+> **Note 1:** You should'nt make use of it server side, because `weback.DefinePlugin` replace the variables in the source code itself,
+>thus this would defeat the purpose of having `env` variables that can be easily overridden.
+
+> **Note 2:** There is currently a limitation due to the way `weback.DefinePlugin` replace process.env occurrences in the code.
+> You can't *destructure* `process.env` see https://github.com/webpack/webpack/issues/5392 
+
 
 # Licence
 
