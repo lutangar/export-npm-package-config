@@ -1,6 +1,6 @@
 {
   "name": "export-npm-package-config",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Extract npm package config variables from process.env for in-app usage",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -52,5 +52,8 @@
     "prettier-eslint-cli": "^4.4.0",
     "rimraf": "^2.6.2",
     "safe-publish-latest": "^1.1.1"
+  },
+  "dependencies": {
+    "lodash.isnumber": "^3.0.3"
   }
 }
