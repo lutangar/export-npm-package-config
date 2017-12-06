@@ -26,6 +26,8 @@ Npm per-package configuration setting is an *underrated* feature.
 
 ## Standalone
 ```
+import extractPackageConfig from 'extract-npm-package-config';
+
 const packageConfig = extractPackageConfig(process.env);
 ```
 > npm_package_config_domain: 'localhost' 
