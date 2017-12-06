@@ -2,7 +2,7 @@ import isNumber from 'lodash.isnumber';
 
 export default env =>
   Object.keys(env)
-    .filter(key => key.indexOf('npm_package_config') !== -1)
+    .filter(key => key.indexOf('npm_package_config_') !== -1)
     .map(key => ({ [key]: isNumber(env[key]) ? +env[key] : String(env[key]) }))
     .reduce(
       (result, item) => {
