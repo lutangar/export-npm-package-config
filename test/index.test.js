@@ -10,12 +10,8 @@ test('adds 1 + 2 to equal 3', () => {
   };
 
   expect(extractPackageConfig(processEnv)).toEqual({
-    NODE_ENV: 'production',
-    DOMAIN: 'localhost',
-    PORT: 3000,
-    npm_package_config_domain: 'localhost',
-    npm_package_config_port: 3000,
-    another_env_key: 'another_env_value',
-    npm_package_devdependencies_export_npm_package_config: "0.0.7",
+    'process.env.NODE_ENV': JSON.stringify('production'),
+    'process.env.DOMAIN': JSON.stringify('localhost'),
+    'process.env.PORT': JSON.stringify(3000),
   });
 });
