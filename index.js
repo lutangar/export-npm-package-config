@@ -7,9 +7,9 @@ export default env =>
     .reduce(
       (result, item) => {
         const key = Object.keys(item)[0];
-        Object.assign({}, result, { [key]: item[key] });
+
         return {
-          result,
+          ...result,
           [key]: item[key],
         };
       },
