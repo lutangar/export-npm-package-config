@@ -13,5 +13,5 @@ export default env =>
           [key.replace('npm_package_config_', '').toUpperCase()]: item[key],
         };
       },
-      { NODE_ENV: env.NODE_ENV }
+      env,
     );
