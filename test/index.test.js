@@ -10,8 +10,7 @@ test('adds 1 + 2 to equal 3', () => {
   };
 
   expect(extractPackageConfig(processEnv)).toEqual({
-    'process.env.NODE_ENV': JSON.stringify('production'),
-    'process.env.DOMAIN': JSON.stringify('localhost'),
-    'process.env.PORT': JSON.stringify(3000),
+    DOMAIN: 'localhost',
+    PORT: 3000,
   });
 });

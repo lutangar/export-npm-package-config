@@ -1,6 +1,6 @@
 {
   "name": "export-npm-package-config",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Extract npm package config variables from process.env for in-app usage",
   "main": "lib/index.js",
   "module": "es/index.js",
