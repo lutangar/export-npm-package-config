@@ -1,12 +1,12 @@
 {
   "name": "export-npm-package-config",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Extract npm package config variables from process.env for in-app usage",
   "main": "lib/index.js",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "prettier": "prettier-eslint --write --list-different index.js",
     "eslint": "eslint index.js",
     "prepublish": "npm run build && safe-publish-latest",
@@ -15,6 +15,11 @@
     "build:cjs": "cross-env BABEL_ENV=cjs babel index.js --out-dir lib",
     "build:es": "cross-env BABEL_ENV=es babel index.js --out-dir es",
     "build": "npm run clean && npm run build:cjs && npm run build:es"
+  },
+  "jest": {
+    "transform": {
+      ".js$": "babel-7-jest"
+    }
   },
   "repository": {
     "type": "git",
@@ -36,11 +41,14 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.34",
     "@babel/core": "^7.0.0-beta.34",
+    "@babel/register": "^7.0.0-beta.34",
+    "babel-7-jest": "^21.3.1",
     "babel-eslint": "^8.0.3",
     "babel-preset-lag": "^0.1.2",
     "cross-env": "^5.1.1",
     "eslint": "^4.12.1",
     "eslint-config-lag": "0.0.6",
+    "jest": "^21.2.1",
     "prettier-eslint-cli": "^4.4.0",
     "rimraf": "^2.6.2",
     "safe-publish-latest": "^1.1.1"
